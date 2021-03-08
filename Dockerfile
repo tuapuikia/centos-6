@@ -38,4 +38,4 @@ COPY curl.spec /root/rpmbuild/SPECS/curl.spec
 
 RUN cd /root/rpmbuild/SPECS/ && rpmbuild -bb curl.spec
 
-
+WORKDIR /root/rpmbuild/SPECS
