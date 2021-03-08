@@ -2,6 +2,8 @@ FROM centos:6.10
 
 COPY centos6.repo /etc/yum.repos.d/centos6.repo
 
+COPY upgrade.repo /etc/yum.repos.d/upgrade.repo
+
 RUN cd /etc/yum.repos.d/ && \
     sed -i 's/mirrorlist=/#mirrorlist=/g' * && \
     sed -i 's/#baseurl=/baseurl=/g' * && \
