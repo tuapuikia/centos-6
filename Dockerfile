@@ -34,6 +34,8 @@ RUN yum install -y  vim \
 
 RUN rpm -Uvh http://mirror.city-fan.org/ftp/contrib/yum-repo/rhel6/source/curl-7.74.0-2.0.cf.rhel6.src.rpm
 
+COPY curl.spec /root/rpmbuild/SPECS/curl.spec
+
 RUN cd /root/rpmbuild/SPECS/ && rpmbuild -bb curl.spec
 
 
